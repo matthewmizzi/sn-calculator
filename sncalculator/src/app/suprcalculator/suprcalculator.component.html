@@ -1,0 +1,19 @@
+<div class="alert alert-primary" role="alert">
+    Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result.
+    If the expression inputted by the user is invalid an error message should be displayed.
+</div>
+
+<div>
+  <div class="form-group">
+    <input type="text" class="form-control" disabled id="displayedInput" [(ngModel)]="displayedInput" >
+    <input type="text" class="form-control" disabled id="displayedOutput" [(ngModel)]="displayedOutput" >
+  </div>
+  <app-calcinputs (clickedInput)="keyPress($event)" ></app-calcinputs>
+  <div class="row">
+      <div class="col-md-12">
+          <button type="button" (click)="removeLast()" class="btn btn-primary btn-block">
+            Clear
+          </button>
+      </div>
+  </div>
+</div>

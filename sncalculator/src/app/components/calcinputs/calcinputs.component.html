@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let calcInput of inputs">
+        <button type="button" class="btn btn-primary btn-block" (click)="onInputClicked(calcInput)">
+          {{ calcInput }}
+        </button>
+    </div>
+</div>

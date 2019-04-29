@@ -13,9 +13,11 @@ export class ExpressionsService {
     {name: "multiplication", rule: "^[0-9][8][0-9]+$"}
   ];
 
+  savedExpressions = [];
+
   constructor() { }
 
-  evaluateExpressions(expression) {
+  validateExpressions(expression) {
     var trimmedExpression = expression.replace(' ', '');
     var regexp;
     var ruleTriggered = null;
@@ -26,5 +28,15 @@ export class ExpressionsService {
     })
 
     return ruleTriggered;
+  }
+
+  validateExpression(expression){
+    return this.validateExpressions(expression);
+  }
+
+  evaluateExpression(expression){
+    if(this.validateExpressions(expression) != null){
+      return eval(expression);
+    }
   }
 }

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CalculatorsettingsService {
 
-  controls = ["+","-","x","/","9","8","7","6","5","4","3","2","1", "0"];
+  controls = ["+","-","*","/","9","8","7","6","5","4","3","2","1", "0"];
 
   constructor() { }
 

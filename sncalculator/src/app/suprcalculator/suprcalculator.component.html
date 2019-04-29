@@ -5,9 +5,13 @@
 
 <div>
   <div class="form-group">
+    <label for="displayedInput">Input</label>
     <input type="text" class="form-control" disabled id="displayedInput" [(ngModel)]="displayedInput" >
-    <input type="text" class="form-control" disabled id="displayedOutput" [(ngModel)]="displayedOutput" >
   </div>
+  <div class="form-group">
+      <label for="displayedOutput">Output</label>
+      <input type="text" class="form-control" disabled id="displayedOutput" [(ngModel)]="displayedOutput" >
+    </div>
   <app-calcinputs (clickedInput)="keyPress($event)" ></app-calcinputs>
   <div class="row">
       <div class="col-md-12">

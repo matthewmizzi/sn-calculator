@@ -7,11 +7,15 @@ import { ExpressionvalidatorComponent } from './expressionvalidator/expressionva
 import { ExpressionevaluatorComponent } from './expressionevaluator/expressionevaluator.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
+import { SuprcalculatorComponent } from './suprcalculator/suprcalculator.component';
+import { CalcinputsComponent } from './components/calcinputs/calcinputs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'expressvalidator', component: ExpressionvalidatorComponent},
   {path: 'expressevaluator', component: ExpressionevaluatorComponent},
   {path: 'calculator', component: CalculatorComponent},
+  {path: 'suprcalculator', component: SuprcalculatorComponent},
 ]
 
 @NgModule({
@@ -19,7 +23,9 @@ const appRoutes: Routes = [
     AppComponent,
     ExpressionvalidatorComponent,
     ExpressionevaluatorComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    SuprcalculatorComponent,
+    CalcinputsComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -28,7 +34,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

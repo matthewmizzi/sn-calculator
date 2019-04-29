@@ -6,6 +6,6 @@
   <div class="form-group">
     <label for="textValidator">Expression</label>
     <input type="text" (keyup)="keyPress($event)" class="form-control" id="textValidator" placeholder="Enter expression">
-    <small class="form-text text-success" *ngIf="this.result">Valid expression of type: {{ this.result }}</small>
+    <small class="form-text text-success" *ngIf="this.result">{{ this.result }}</small>
   </div>
 </div>

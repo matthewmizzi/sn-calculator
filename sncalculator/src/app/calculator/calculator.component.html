@@ -7,8 +7,14 @@
   <div class="form-group">
     <label for="textEvaluator">Expression</label>
     <input type="text" (keyup)="keyPress($event)" class="form-control" id="textEvaluator" placeholder="Enter expression">
-    <small id="emailHelp" class="form-text text-success" *ngIf="this.result">Valid! The result is: {{ this.result }}</small>
-    <small id="emailHelp" class="form-text text-danger" *ngIf="!this.result">Invalid</small>
+  </div>
+
+  <div class="alert alert-success" *ngIf="this.result" role="alert">
+      Valid! The result is: {{ this.result }}
+  </div>
+
+  <div class="alert alert-danger" *ngIf="!this.result" role="alert">
+      Invalid
   </div>
 </div>
 

@@ -1,0 +1,13 @@
+<div class="alert alert-primary" role="alert">
+    Given a valid expression evaluate. For example, sin(30) + cos(20) = −0.5799495623.
+</div>
+
+<div>
+  <div class="form-group">
+    <label for="textEvaluator">Expression</label>
+    <input type="text" [(ngModel)]="userInput" class="form-control" id="textEvaluator" placeholder="Enter expression">
+    <small id="emailHelp" class="form-text text-success" *ngIf="this.result">The result is: {{ this.result }}</small>
+  </div>
+  <button type="submit" (click)="evaluate()" class="btn btn-primary">Evaluate expression</button>
+</div>
+

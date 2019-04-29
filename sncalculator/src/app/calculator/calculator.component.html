@@ -1,0 +1,14 @@
+<div class="alert alert-primary" role="alert">
+    Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result.
+    If the expression inputted by the user is invalid an error message should be displayed.
+</div>
+
+<div>
+  <div class="form-group">
+    <label for="textEvaluator">Expression</label>
+    <input type="text" (keyup)="keyPress($event)" class="form-control" id="textEvaluator" placeholder="Enter expression">
+    <small id="emailHelp" class="form-text text-success" *ngIf="this.result">Valid! The result is: {{ this.result }}</small>
+    <small id="emailHelp" class="form-text text-danger" *ngIf="!this.result">Invalid</small>
+  </div>
+</div>
+

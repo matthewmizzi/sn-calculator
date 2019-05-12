@@ -1,0 +1,20 @@
+.navbar-secondary{
+    @include coloring($secondary-color);
+
+    .navbar-brand,
+    .navbar-toggler-icon{
+        @include coloring("", $white-color, "");
+        i{
+            @include font-size(2rem);
+        }
+    }
+
+    .navbar-nav{
+        .nav-item{
+            a{
+                @include coloring("", $white-color, "");
+            }
+            
+        }
+    }
+}

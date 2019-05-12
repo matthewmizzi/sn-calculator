@@ -10,8 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { SuprcalculatorComponent } from './suprcalculator/suprcalculator.component';
 import { CalcinputsComponent } from './components/calcinputs/calcinputs.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AlertComponent } from './components/alert/alert.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
+  {path: '', component: ExpressionvalidatorComponent},
   {path: 'expressvalidator', component: ExpressionvalidatorComponent},
   {path: 'expressevaluator', component: ExpressionevaluatorComponent},
   {path: 'calculator', component: CalculatorComponent},
@@ -25,7 +28,9 @@ const appRoutes: Routes = [
     ExpressionevaluatorComponent,
     CalculatorComponent,
     SuprcalculatorComponent,
-    CalcinputsComponent
+    CalcinputsComponent,
+    AlertComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(

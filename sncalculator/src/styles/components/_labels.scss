@@ -1,0 +1,20 @@
+.label{
+    @include block(100%);
+    @include padding(0.5rem, 1rem, 0.5rem, 1rem);
+
+    &.label-success{
+        @include coloring($success-color, $light-text-color);
+    }
+
+    &.label-warning{
+        @include coloring($warning-color, $light-text-color);
+    }
+
+    &.label-danger{
+        @include coloring($danger-color, $light-text-color);
+    }
+
+    &.label-info{
+        @include coloring($info-color, $light-text-color);
+    }
+}

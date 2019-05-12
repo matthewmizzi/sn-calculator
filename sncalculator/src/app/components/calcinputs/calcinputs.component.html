@@ -1,7 +1,10 @@
-<div class="row no-margin">
-    <div class="col-4 col-sm-4 col-md-4 no-padding" *ngFor="let calcInput of inputs">
-        <button type="button" class="btn btn-primary btn-block" (click)="onInputClicked(calcInput)">
-          {{ calcInput }}
-        </button>
-    </div>
-</div>
+
+<ng-container *ngFor="let calcInput of inputs">         
+  <button type="button" class="button {{calcInput.class}}" (click)="onInputClicked(calcInput)" >
+    {{ calcInput.control }}
+  </button>
+</ng-container>
+
+<button type="button" class="button button-primary" (click)="onInputClear()" >Clear</button>
+
+

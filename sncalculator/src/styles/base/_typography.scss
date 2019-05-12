@@ -1,0 +1,22 @@
+html { @include font-size($primary-size); } 
+body { @include font-size(1.4rem); }
+
+//headings
+h1{ @include font-size(4.0rem); }
+h2{ @include font-size(3.2rem); }
+h3{ @include font-size(2.8rem); }
+h4{ @include font-size(2.4rem); }
+h5{ @include font-size(1.8rem); }
+h6{ @include font-size(); }
+
+//elements
+small{ @include font-size(1.2rem); }
+
+label,
+input,
+a,
+p,
+i,
+button{
+    @include font-size();
+}

@@ -1,0 +1,72 @@
+.alert-message{
+    @include padding(1rem, 1.5rem, 1rem, 1.5rem);
+    @include border(0 0 0.75rem 0, solid);
+    @include coloring($white-color, "", $tertiary-color);
+    @include shadow($shadow);
+    @include flex("", center);
+
+    .alert-message-icon{
+        @include font-size(4.5rem);
+        @include coloring("", $tertiary-color, "");
+        @include padding(0, 1.0rem, 0, 0);
+    }
+
+    .alert-message-body{
+        .alert-message-text{
+            @include margin();
+        }
+
+        .alert-message-title{
+            @include font-weight();
+            @include coloring("", $tertiary-color, "");
+        }
+    }
+
+    &.alert-message-primary{
+        @include coloring("", "", $primary-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $primary-color, "");
+        }
+    }
+
+    &.alert-message-secondary{
+        @include coloring("", "", $secondary-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $secondary-color, "");
+        }
+    }
+
+    &.alert-message-warning{
+        @include coloring("", "", $warning-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $warning-color, "");
+        }
+    }
+
+    &.alert-message-success{
+        @include coloring("", "", $success-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $success-color, "");
+        }
+    }
+
+    &.alert-message-danger{
+        @include coloring("", "", $danger-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $danger-color, "");
+        }
+    }
+
+    &.alert-message-info{
+        @include coloring("", "", $info-color);
+        .alert-message-icon, 
+        .alert-message-title{
+            @include coloring("", $info-color, "");
+        }
+    }
+}

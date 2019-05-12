@@ -1,0 +1,22 @@
+//utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+@import './utilities/helpers';
+
+//base
+@import './base/base';
+@import './base/typography';
+
+//components
+@import './components/buttons';
+@import './components/alerts';
+@import './components/calculator';
+@import './components/labels';
+@import './components/forms';
+@import './components/containers';
+
+//layout 
+@import './layout/navbar';
+
+//pages
+@import './pages/home';

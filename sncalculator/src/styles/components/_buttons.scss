@@ -1,0 +1,72 @@
+.button{
+    @include block();
+    @include coloring($tertiary-color, $dark-text-color);
+    @include border();
+    @include padding(0.75rem, 1rem, 0.75rem, 1rem);
+    @include transition(background-color 0.5s, color 0.5s);
+
+    &:focus {
+        outline:0;
+    }
+
+    &:hover{
+        @include transition(background-color 0.5s, color 0.5s);
+        @include coloring($secondary-color, $light-text-color);
+    }
+
+    &.button-primary{
+        @include coloring($primary-color, $light-text-color);
+
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+
+    &.button-secondary{
+        @include coloring($secondary-color, $light-text-color);
+
+        &:hover{
+            @include coloring($primary-color, $light-text-color);
+        }
+    }
+
+    &.button-tertiary{
+        @include coloring($quaternary-color, $dark-text-color);
+
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+
+    &.button-success{
+        @include coloring($success-color, $light-text-color);
+
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+
+    &.button-warning{
+        @include coloring($warning-color, $light-text-color);
+        
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+
+    &.button-danger{
+        @include coloring($danger-color, $light-text-color);
+
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+
+    &.button-info{
+        @include coloring($info-color, $light-text-color);
+
+        &:hover{
+            @include coloring($secondary-color, $light-text-color);
+        }
+    }
+}

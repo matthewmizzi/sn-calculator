@@ -1,0 +1,27 @@
+.calculator{
+    .calculator-display{
+        @include padding(1rem, 1.5rem, 1rem, 1.5rem);
+        @include flex(column);
+        @include coloring($primary-color);
+
+        input{
+            @include coloring(transparent, $light-text-color);
+            @include border(0);
+            text-align: right;
+
+            &.calculator-display-big{
+                @include font-size(6rem);
+                @include font-weight();
+            }
+        }
+    }
+
+    .calculator-controls{
+        @include coloring($quaternary-color);
+        @include grid(repeat(3, auto),repeat(5, 80px));
+
+        .button{
+            @include font-size(1.8rem);
+        }
+    }
+}

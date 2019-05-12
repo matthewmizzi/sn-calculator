@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuprcalculatorComponent implements OnInit {
 
-  displayedInput = "";
-  displayedOutput = "";
+  displayedInput = "0";
+  displayedOutput = "0";
 
   constructor(private data: ExpressionsService) {
     this.data.getRandomNumber().then(response => {
@@ -23,7 +23,7 @@ export class SuprcalculatorComponent implements OnInit {
   }
 
   keyPress(event){
-    this.displayedInput += event;
+    this.displayedInput += event.control;
     this.displayedOutput = this.data.evaluateExpression(this.displayedInput);
   }
 

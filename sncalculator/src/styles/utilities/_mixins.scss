@@ -1,0 +1,94 @@
+@mixin query($size) {
+    @if $size == phone {
+        @media (min-width: 300px) { @content; }
+    } @else if $size == phone-wide {
+        @media (min-width: 600px) { @content; }
+    } @else if $size == tablet {
+        @media (min-width: 768px) { @content; }
+    } @else if $size == tablet-wide {
+        @media (min-width: 1024px) { @content; }
+    } @else if $size == desktop {
+        @media (min-width: 1200px) { @content; }
+    } @else if $size == desktop-wide {
+        @media (min-width: 1800px) { @content; }
+    }
+}
+
+@mixin grid($columns, $rows){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+@mixin flex($direction, $align:""){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin font-size($size:inherit){
+    font-size: $size;
+}
+
+@mixin font-weight($weight:bold){
+    font-weight: $weight;
+}
+
+@mixin block($width:auto){
+    display: block;
+    width: $width;
+}
+
+@mixin border($width:0, $style:""){
+    border-width: $width;
+    @if $style != "" {
+        border-style: $style;
+    }
+}
+
+@mixin padding($top:0, $right:0, $bottom:0, $left:0){
+    @if $top == $bottom and $right == $left{
+        padding: $top $right;
+    }
+    @else {
+        padding: $top $right $bottom $left;
+    }
+}
+
+@mixin margin($top:0, $right:0, $bottom:0, $left:0){
+    @if $top == $bottom and $right == $left{
+        margin: $top $right;
+    }
+    @else {
+        margin: $top $right $bottom $left;
+    }
+}
+
+@mixin coloring($background: "", $color: "", $border: ""){
+    @if $background != "" {
+        background-color: $background;
+    }
+    @if $color != "" {
+        color: $color; 
+    }
+
+    @if $border != "" {
+        border-color: $border; 
+    }
+    
+    
+}
+
+@mixin shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;       
+    box-shadow: $shadow;
+  }
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}

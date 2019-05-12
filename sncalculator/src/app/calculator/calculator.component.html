@@ -1,20 +1,19 @@
-<div class="alert alert-primary" role="alert">
-    Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result.
-    If the expression inputted by the user is invalid an error message should be displayed.
-</div>
+<app-alert 
+  icon='fa-calculator'
+  title='Calculator'
+  message='Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result.
+  If the expression inputted by the user is invalid an error message should be displayed.'
+>
+</app-alert>
 
-<div>
-  <div class="form-group">
-    <label for="textEvaluator">Expression</label>
-    <input type="text" (keyup)="keyPress($event)" class="form-control" id="textEvaluator" placeholder="Enter expression">
-  </div>
-
-  <div class="alert alert-success" *ngIf="this.result" role="alert">
-      Valid! The result is: {{ this.result }}
-  </div>
-
-  <div class="alert alert-danger" *ngIf="!this.result" role="alert">
-      Invalid
+<div class="flex-container">
+  <div class="form-container">
+    <div class="form-input">
+      <label for="textEvaluator">Expression</label>
+      <input type="text" (keyup)="keyPress($event)" autocomplete="off" class="input" id="textEvaluator" placeholder="Enter expression">
+      <small class="label label-success" *ngIf="this.result">Valid! The result is: {{ this.result }}</small>
+      <small class="label label-danger" *ngIf="!this.result">Invalid</small>
+    </div>
   </div>
 </div>
 

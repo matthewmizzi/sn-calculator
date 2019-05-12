@@ -10,6 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CalcinputsComponent implements OnInit {
 
   @Output() clickedInput: EventEmitter<string> = new EventEmitter<string>();
+  @Output() clearedInput: EventEmitter<any> = new EventEmitter();
 
   inputs = null;
 
@@ -22,6 +23,10 @@ export class CalcinputsComponent implements OnInit {
 
   onInputClicked(calcInput){
     this.clickedInput.emit(calcInput);
+  }
+
+  onInputClear(){
+    this.clearedInput.emit();
   }
 
 }

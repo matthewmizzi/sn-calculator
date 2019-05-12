@@ -1,23 +1,16 @@
-<div class="alert alert-primary" role="alert">
-    Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result.
-    If the expression inputted by the user is invalid an error message should be displayed.
-</div>
+<app-alert 
+  icon='fa-calculator'
+  title='SN Calculator'
+  message='Write a Single Page Application that allows the user to input an expression, validates the expression (on every keypress) and evaluates the result. If the expression inputted by the user is invalid an error message should be displayed.'
+>
+</app-alert>
 
-<div>
-  <div class="form-group">
-    <label for="displayedInput">Input</label>
-    <input type="text" class="form-control" disabled id="displayedInput" [(ngModel)]="displayedInput" >
-  </div>
-  <div class="form-group">
-      <label for="displayedOutput">Output</label>
-      <input type="text" class="form-control" disabled id="displayedOutput" [(ngModel)]="displayedOutput" >
+<div class="flex-container">
+  <div class="form-container no-padding calculator">
+    <div class="calculator-display">
+      <input class="calculator-display-big" type="text" disabled id="displayedOutput" [(ngModel)]="displayedOutput" >
+      <input type="text" disabled id="displayedInput" [(ngModel)]="displayedInput" >  
     </div>
-  <app-calcinputs (clickedInput)="keyPress($event)" ></app-calcinputs>
-  <div class="row">
-      <div class="col-md-12">
-          <button type="button" (click)="removeLast()" class="btn btn-primary btn-block">
-            Clear
-          </button>
-      </div>
+    <app-calcinputs class="calculator-controls" (clickedInput)="keyPress($event)" (clearedInput) ="removeLast()" ></app-calcinputs>
   </div>
 </div>

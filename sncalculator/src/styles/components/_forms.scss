@@ -1,0 +1,26 @@
+.form-container{
+    @include coloring($white-color);
+    @include padding(1rem, 1.5rem, 1rem, 1.5rem);
+    @include shadow($shadow);
+    position: relative;
+
+    @include query(phone) {    
+        width: 100%;
+    }
+
+    @include query(tablet) {    
+        width: 60%;
+    }
+
+    @include query(desktop) {    
+        width: 40%;
+    }
+
+    .form-input{
+        @include margin(0, 0, 2.0rem, 0);
+        .input{
+            @include block(100%);
+            @include padding(0.25rem, 1rem, 0.25rem, 1rem);
+        }
+    }
+}
